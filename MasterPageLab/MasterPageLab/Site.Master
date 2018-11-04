@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MasterPageLab.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <style>
+        .jambo
+        {
+            background-color:#0000FF;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <div class="container" style="width:50% ; border:1px solid; margin-bottom:10px">
+        
+   
+    <form id="form1" runat="server" class="form-horizontal">
+            <header class="jumbotron jambo">
+            <img src="Images/logo.png" alt="Royal Inns and Suites" />
+            </header>
+        <div>
+            <asp:ContentPlaceHolder ID="mainContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer>
+            <div>
+                <asp:ContentPlaceHolder ID="footerContentPlaceHolder" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+        </footer>
+   
+    </form>
+  </div>
+</body>
+</html>
